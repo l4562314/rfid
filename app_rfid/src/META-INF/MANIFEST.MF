@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Class-Path: antlr-2.7.6.jar apache-solr-solrj-3.3.0.jar c3p0-0.9.1.2.j
+ ar cglib-nodep-2.1_3.jar com.springsource.net.sf.cglib-2.2.0.jar com.
+ springsource.org.aopalliance-1.0.0.jar com.springsource.org.junit-4.7
+ .0.jar commons-beanutils-1.7.0.jar commons-codec-1.3.jar commons-coll
+ ections-3.1.jar commons-fileupload-1.2.1.jar commons-io-1.3.2.jar com
+ mons-lang-2.3.jar commons-logging-1.1.1.jar commons-pool-1.5.6.jar do
+ m4j-1.6.1.jar ezmorph-1.0.1.jar freemarker-2.3.16.jar hibernate-jpa-2
+ .0-api-1.0.0.Final.jar hibernate3.jar httpclient-4.0.1.jar httpcore-4
+ .0.1.jar httpmime-4.0.1.jar javassist-3.12.0.GA.jar java_memcached-re
+ lease_2.5.3.jar jmagick.jar json-lib-2.2.3-jdk15.jar jstl.jar jta-1.1
+ .jar log4j-1.2.14.jar mail.jar memcached_2_0_1.jar mysql-connector-ja
+ va-5.0.4-bin.jar org.springframework.aop-3.0.5.RELEASE.jar org.spring
+ framework.asm-3.0.5.RELEASE.jar org.springframework.aspects-3.0.5.REL
+ EASE.jar org.springframework.beans-3.0.5.RELEASE.jar org.springframew
+ ork.context-3.0.5.RELEASE.jar org.springframework.context.support-3.0
+ .5.RELEASE.jar org.springframework.core-3.0.5.RELEASE.jar org.springf
+ ramework.expression-3.0.5.RELEASE.jar org.springframework.instrument-
+ 3.0.5.RELEASE.jar org.springframework.instrument.tomcat-3.0.5.RELEASE
+ .jar org.springframework.jdbc-3.0.5.RELEASE.jar org.springframework.j
+ ms-3.0.5.RELEASE.jar org.springframework.orm-3.0.5.RELEASE.jar org.sp
+ ringframework.oxm-3.0.5.RELEASE.jar org.springframework.test-3.0.5.RE
+ LEASE.jar org.springframework.transaction-3.0.5.RELEASE.jar org.sprin
+ gframework.web-3.0.5.RELEASE.jar p6spy.jar pengyou-java-sdk-v1.0.0.ja
+ r pengyou_v3.jar sardine.jar slf4j-api-1.6.1.jar slf4j-log4j12-1.6.1.
+ jar sqlprofiler.jar standard.jar stripes.jar thrift.jar
+

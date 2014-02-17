@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<description>juedui100 h5</description>
+	<display-name>juedui100 h5</display-name>
+	<tlib-version>1.1</tlib-version>
+	<short-name>jdh5</short-name>
+	<uri>http://www.juedui100.com/html5</uri>
+
+
+
+	<function>
+		<name>getDayView</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getDayView(long,long)
+		</function-signature>
+	</function>
+	<function>
+		<name>getSelected</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getSelected(java.lang.String,com.juedui100.sns.model.UserInterest,java.lang.String)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>getDayViewBox</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getDayViewBox(long,java.lang.String)
+		</function-signature>
+	</function>
+	
+	<function>
+		<name>setDefaultOption</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String setDefaultOption(java.lang.String,java.lang.String)
+		</function-signature>
+	</function>
+
+	<function>
+		<name>getHeightSelect</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getHeightSelect(int,int)
+		</function-signature>
+	</function>
+
+
+	<function>
+		<name>getNicknameText</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getNicknameText(java.long.String)
+		</function-signature>
+	</function>
+
+
+	<function>
+		<name>getDescText</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getDescText(s)
+		</function-signature>
+	</function>
+
+	<function>
+		<name>getSex</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getSex(int)
+		</function-signature>
+	</function>
+
+	<function>
+		<name>getAreaName</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getAreaName(int,int)
+		</function-signature>
+	</function>
+
+	
+
+	<function>
+		<name>getBirthday</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getBirthday(long)
+		</function-signature>
+	</function>
+
+	<function>
+		<name>getInterestName</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getInterestName(java.lang.String)
+		</function-signature>
+	</function>
+
+	<function>
+		<name>getSelectTag</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getSelectTag(java.lang.String,int ,int)
+		</function-signature>
+	</function>
+
+
+	<function>
+		<name>getValue</name>
+		<function-class>
+			com.juedui100.sns.web.tag.Html5Tag
+		</function-class>
+		<function-signature>
+			java.lang.String getValue(java.lang.String,int ,int)
+		</function-signature>
+	</function>
+
+
+
+</taglib>

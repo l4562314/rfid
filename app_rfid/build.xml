@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<project name="protobuf-mina-rpc" default="thrift-gen">
+    <property name="basedir" value="."/>
+    <property name="thrift.dir" value="${basedir}/src/com/juedui100/sns/thrift"/>
+    <!-- Generate thrift java -->
+    <target name="thrift-gen">
+        <echo message="Running thrift generator "/>
+        <apply executable="thrift-0.6.1.exe" dir="${basedir}" parallel="false">
+            <fileset dir="${thrift.dir}" includes="questionanswer.thrift"/>
+            <arg line="--gen java:beans -o ."/>
+            <srcfile/>
+        </apply>
+    </target>
+</project>

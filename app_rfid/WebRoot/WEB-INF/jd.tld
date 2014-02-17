@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+    <description>juedui100 functions</description>
+    <display-name>juedui100 Functions</display-name>
+    <tlib-version>1.1</tlib-version>
+    <short-name>jdfn</short-name>
+    <uri>http://www.juedui100.com/functions</uri>
+
+    <tag>
+        <description></description>
+        <name>page</name>
+        <tag-class>com.juedui100.sns.web.tag.PagerTag</tag-class>
+        <body-content>JSP</body-content>
+        <attribute>
+            <description></description>
+            <name>curPage</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description></description>
+            <name>totalCount</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description></description>
+            <name>yms</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description></description>
+            <name>pageSize</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description></description>
+            <name>jdbcPage</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description></description>
+            <name>style</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description></description>
+            <name>container</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <description></description>
+            <name>minId</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+
+    </tag>
+
+    <function>
+        <name>formatDate</name>
+        <function-class>com.juedui100.sns.util.DateUtils</function-class>
+        <function-signature>java.lang.String formatDate(long,java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>formatDate2</name>
+        <function-class>com.juedui100.sns.util.DateUtils</function-class>
+        <function-signature>java.lang.String formatDate2(java.util.Date,java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>listExist</name>
+        <function-class>com.juedui100.sns.util.ListUtil</function-class>
+        <function-signature>boolean isExist(java.util.List,java.lang.String,java.lang.Object)</function-signature>
+    </function>
+    <function>
+        <name>friendlyTime</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String friendlyTime(long)</function-signature>
+    </function>
+    <function>
+        <name>random</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>double random()</function-signature>
+    </function>
+    <function>
+        <name>delHtml</name>
+        <function-class>com.juedui100.sns.util.HtmlUtils</function-class>
+        <function-signature>java.lang.String delHtml(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>encodeUTF8</name>
+        <function-class>java.net.URLEncoder</function-class>
+        <function-signature>java.lang.String encode(java.lang.String,java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>percent</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>double percent(int,int)</function-signature>
+    </function>
+    <function>
+        <name>week</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String week(long)</function-signature>
+    </function>
+    <function>
+        <name>intervalTime</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String intervalTime(long)</function-signature>
+    </function>
+    <function>
+        <name>locUrl</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String locUrl(javax.servlet.http.HttpServletRequest)</function-signature>
+    </function>
+
+    <function>
+        <name>enUrl</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String enUrl(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>sourcePage</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String sourcePage(javax.servlet.http.HttpServletRequest)</function-signature>
+    </function>
+    <function>
+        <name>sourcePageByUrl</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String sourcePageByUrl(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getParamsWithPageNo</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String getParamsWithPageNo(javax.servlet.http.HttpServletRequest,int)
+        </function-signature>
+    </function>
+    <function>
+        <name>getNewUrl</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String getNewUrl(javax.servlet.http.HttpServletRequest,int)</function-signature>
+    </function>
+    <function>
+        <name>subStr</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String subStr(java.lang.String,int)</function-signature>
+    </function>
+    <function>
+        <name>encodeXml</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String encodeXml(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>contains</name>
+        <function-class>org.apache.commons.lang.ArrayUtils</function-class>
+        <function-signature>boolean contains(java.lang.Object[],java.lang.Object)</function-signature>
+    </function>
+
+    <function>
+        <name>greetContent</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String greetContent(int)</function-signature>
+    </function>
+
+    <function>
+        <name>everyNewUrl</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String everyNewUrl(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>filterMsg</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String filterMsg(java.lang.String,java.lang.String))</function-signature>
+    </function>
+    <function>
+        <name>filterMsgWap1</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String filterMsgWap1(java.lang.String,java.lang.String,java.lang.String)))
+        </function-signature>
+    </function>
+    <function>
+        <name>filterContent</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String filterContent(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>filterActivity</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String filterActivity(java.lang.String,java.lang.String))</function-signature>
+    </function>
+    <function>
+        <name>filterKeyWord</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String filterKeyWord(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>filterActivityWap</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String filterActivityWap(java.lang.String,java.lang.String,java.lang.String)))
+        </function-signature>
+    </function>
+    <function>
+        <name>isSameHour</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>boolean isSameHour(java.util.Date,java.util.Date)</function-signature>
+    </function>
+    <function>
+        <name>getDiffDays</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>int getDiffDays(java.util.Date,java.util.Date)</function-signature>
+    </function>
+
+    <function>
+        <name>replaceUrl</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String replaceUrl(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>openkey</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String openKey(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>pf</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String getPf(javax.servlet.http.HttpServletRequest)</function-signature>
+    </function>
+      <function>
+        <name>getHobbys</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String[] getHobbys(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>iscontains</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>boolean iscontains(java.lang.String,java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>delstr</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String delstr(java.lang.String,java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>filterMsgTextTag</name>
+        <function-class>com.juedui100.sns.web.tag.FunctionsTag</function-class>
+        <function-signature>java.lang.String filterMsgTextTag(java.lang.String)</function-signature>
+    </function>
+    
+</taglib>

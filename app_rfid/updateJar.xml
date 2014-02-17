@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project name="updateJar" default="updateJar">
+    <property name="basedir" value="."/>
+    <property name="source.jar" value="${basedir}/classes/artifacts/App_sns_jar/app_sns.jar"/>
+    <property name="classes.dir" value="WebRoot/WEB-INF/classes" basedir="."/>
+    <property name="src.dir" value="src" basedir="."/>
+    <property name="app_cron.dir" value="/home/xuhui/workspace/app_cron/WebContent/WEB-INF/lib"/>
+    <property name="app_server.dir" value="/home/xuhui/workspace/app_sns_server/lib"/>
+
+    <property name="classpathref" value="${basedir}/WebRoot/WEB-INF/lib"/>
+    <property name="lib.dir" value="${classpathref}"/>
+    <path id="master-classpath">
+        <fileset file="${lib.dir}/*.jar"/>
+        <pathelement path="d:/Program Files/apache-tomcat-6.0.20/lib/jsp-api.jar"/>
+        <pathelement path="d:/Program Files/apache-tomcat-6.0.20/lib/servlet-api.jar"/>
+        <pathelement path="${lib.dir}"/>
+    </path>
+
+    <target name="compile">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}">
+        <compilerarg line="-encoding UTF-8 "/>
+        <classpath refid="master-classpath"/>
+        </javac>
+    	
+    	 <copy file="${classes.dir}/db.properties" todir="${basedir}/local/" overwrite="true"/>
+    	 <copy file="${classes.dir}/log4j.properties" todir="${basedir}/local/" overwrite="true"/>
+    	 <copy file="${classes.dir}/jd100.properties" todir="${basedir}/local/" overwrite="true"/>
+    	
+        <copy file="${basedir}/production/db.properties" todir="${classes.dir}" overwrite="true"/>
+        <copy file="${basedir}/production/log4j.properties" todir="${classes.dir}" overwrite="true"/>
+        <copy file="${basedir}/production/jd100.properties" todir="${classes.dir}" overwrite="true"/>
+    	
+
+    	
+    	
+<!--        <copy file="${basedir}/production/db.properties" todir="${classes.dir}" overwrite="true"/>
+        <copy file="${basedir}/production/log4j.properties" todir="${classes.dir}" overwrite="true"/>
+        <copy file="${basedir}/production/jd100.properties" todir="${classes.dir}" overwrite="true"/>-->
+    </target>
+
+    <target name="build" depends="compile">
+        <jar jarfile="${source.jar}" basedir="${classes.dir}">
+        	<!--exclude name="*.properties"/>
+        	<exclude name="*.xml"/-->
+    	</jar>
+    </target>
+	
+	
+	
+
+    <target name="updateJar" depends="build">
+        <echo message="copy app_sns.jar from app_sns to app_cron"/>
+        <copy file="${source.jar}" todir="${app_cron.dir}"/>
+        <echo message="copy app_sns.jar from app_sns to app_server"/>
+        <copy file="${source.jar}" todir="${app_server.dir}"/>
+    	
+        <copy file="${basedir}/local/db.properties" todir="${classes.dir}" overwrite="true"/>
+        <copy file="${basedir}/local/log4j.properties" todir="${classes.dir}" overwrite="true"/>
+        <copy file="${basedir}/local/jd100.properties" todir="${classes.dir}" overwrite="true"/>
+    	
+    </target>
+</project>

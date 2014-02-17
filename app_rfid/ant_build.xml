@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<project name="hunlian-qq-build" default="tozip">
+    <property name="basedir" value="."/>
+    <property name="src.dir" value="src"/>
+    <property name="gensrc.dir" value="gen-javabean"/>
+    <property name="class.dir" value="WebRoot/WEB-INF/classes"/>
+
+    <mkdir dir="${class.dir}"/>
+
+    <property name="classpathref" value="${basedir}/WebRoot/WEB-INF/lib"/>
+    <property name="lib.dir" value="${classpathref}"/>
+    <path id="master-classpath">
+        <fileset file="${lib.dir}/*.jar"/>
+        <pathelement path="/home/xuhui/java/apache-tomcat-6.0.35/lib/jsp-api.jar"/>
+        <pathelement path="/home/xuhui/java/apache-tomcat-6.0.35/lib/servlet-api.jar"/>
+        <pathelement path="${lib.dir}"/>
+    </path>
+
+    <property name="jar" value="test.jar"/>
+
+    <target name="rungen">
+        <javac srcdir="${gensrc.dir}" destdir="${class.dir}" target="1.6">
+            <compilerarg line="-encoding UTF-8 "/>
+            <classpath refid="master-classpath"/>
+        </javac>
+    </target>
+    <target name="runsrc">
+        <javac srcdir="${src.dir}" depend="rungen" destdir="${class.dir}" target="1.6">
+            <compilerarg line="-encoding UTF-8 "/>
+            <classpath refid="master-classpath"/>
+        </javac>
+    </target>
+
+
+    <target name="tozip" depends="runsrc">
+        <zip destfile="app_sns.zip" basedir="WebRoot">
+            <exclude name="WEB-INF/classes/db.properties"></exclude>
+            <exclude name="WEB-INF/classes/jd100.properties"></exclude>
+            <exclude name="WEB-INF/classes/log4j.properties"></exclude>
+        	<exclude name="WEB-INF/classes/db_applicationContextCmem.xml"></exclude>
+        	<exclude name="WEB-INF/classes/dbts.properties"></exclude>
+        	
+        	<exclude name="WEB-INF/classes/com/juedui100/sns/util/cmemdb/**"></exclude>
+        	<exclude name="WEB-INF/classes/com/meetup/**"></exclude>
+        	
+        	
+            <exclude name="WEB-INF/lib/**"></exclude>
+            <exclude name="styles_src/**"></exclude>
+            <exclude name="js_src/**"></exclude>
+            <exclude name="js/**"></exclude>
+            <exclude name="styles/**"></exclude>
+            <exclude name="images/**"></exclude>
+            <exclude name="activity_11.11/**"></exclude>
+            <exclude name="**/CVS/**"></exclude>
+            <exclude name="**/CVS/**"></exclude>
+            <exclude name="importDate.jsp"></exclude>
+            <exclude name="qqtest.jsp"></exclude>
+            <exclude name="users.jsp"></exclude>
+            <exclude name="wapusers.jsp"></exclude>
+        </zip>
+    </target>
+</project>

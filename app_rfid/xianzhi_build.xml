@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<project name="hunlian-qq-build" default="xztozip">
+    <property name="basedir" value="."/>
+    <property name="src.dir" value="src"/>
+    <property name="gensrc.dir" value="gen-javabean"/>
+    <property name="class.dir" value="WebRoot/WEB-INF/classes"/>
+
+    <mkdir dir="${class.dir}"/>
+
+    <property name="classpathref" value="${basedir}/WebRoot/WEB-INF/lib"/>
+    <property name="lib.dir" value="${classpathref}"/>
+    <path id="master-classpath">
+        <fileset file="${lib.dir}/*.jar"/>
+        <pathelement path="d:/tomcat-6.0.20/lib/jsp-api.jar"/>
+        <pathelement path="d:/tomcat-6.0.20/lib/servlet-api.jar"/>
+        <pathelement path="${lib.dir}"/>
+    </path>
+
+    <property name="jar" value="test.jar"/>
+
+    <target name="rungen">
+        <javac srcdir="${gensrc.dir}" destdir="${class.dir}" target="1.6">
+            <compilerarg line="-encoding UTF-8 "/>
+            <classpath refid="master-classpath"/>
+        </javac>
+    </target>
+    <target name="runsrc">
+        <javac srcdir="${src.dir}" depend="rungen" destdir="${class.dir}" target="1.6">
+            <compilerarg line="-encoding UTF-8 "/>
+            <classpath refid="master-classpath"/>
+        </javac>
+    </target>
+
+
+    <target name="xztozip" depends="runsrc">
+        <zip destfile="app_sns.zip" basedir="WebRoot">
+            <include name="WEB-INF/classes/com/juedui100/sns/web/action/GiftAction.class"></include>
+            <include name="WEB-INF/classes/com/juedui100/sns/web/action/wap1/GiftAction.class"></include>
+            <include name="WEB-INF/classes/com/juedui100/sns/service/GiftService.class"></include>
+            <include name="WEB-INF/classes/com/juedui100/sns/web/action/GreetAction.class"></include>
+            <include name="WEB-INF/classes/com/juedui100/sns/web/action/wap1/GreetAction.class"></include>
+            <include name="WEB-INF/classes/com/juedui100/sns/service/GreetService.class"></include>
+            <include name="WEB-INF/classes/com/juedui100/sns/web/action/MsgAction.class"></include>
+            <include name="WEB-INF/jsp/wap1/msg/succ.jsp"></include>
+            <include name="WEB-INF/jsp/wap1/gift/succ.jsp"></include>
+            <include name="WEB-INF/jsp/wap1/greet/succ.jsp"></include>
+            <include name="WEB-INF/classes/com/juedui100/sns/web/action/wap1/Wap1SearchAction.class"></include>
+        </zip>
+    </target>
+</project>

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+    <description>juedui100 model</description>
+    <display-name>juedui100 model</display-name>
+    <tlib-version>1.1</tlib-version>
+    <short-name>jdmodel</short-name>
+    <uri>http://www.juedui100.com/model</uri>
+
+    <function>
+        <name>metaList</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.util.List metaList(int)</function-signature>
+    </function>
+    
+    
+    <function>
+        <name>metaLabel</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String metaLabel(int,int)</function-signature>
+    </function>
+    <function>
+        <name>metaList_parent</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.util.List metaList(int,int)</function-signature>
+    </function>
+    <function>
+        <name>userInfo</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.UserInfo getUserInfo(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>isRobot</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String isRobot(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getUserProperty</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.UserProperty getUserProperty(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>userDetail</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.UserDetail getUserDetail(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getUserStatus</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.UserStatus getUserStatus(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>wapIntervalTime</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String wapIntervalTime(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>isAttention</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>boolean isAttention(java.lang.String,java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getMessageContentCount</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getMessageContentCount(java.lang.String,java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getUnReadMessageContentCountByReceiver</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getUnReadMessageContentCountByReceiver(java.lang.String,java.lang.String)</function-signature>
+    </function>
+        
+    <function>
+        <name>question</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.Question question(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getNoReadMsgCountAll</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.MsgCountBean getNoReadMsgCountAll(java.lang.String,int)
+        </function-signature>
+    </function>
+    <function>
+        <name>getAddSeeiAiCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddSeeiAiCnt(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getAddSeeiCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddSeeiCnt(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getAddAiCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddAiCnt(java.lang.String)</function-signature>
+    </function>
+     <function>
+        <name>getAddIACnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddIACnt(java.lang.String)</function-signature>
+    </function>
+     <function>
+        <name>getAddISeeCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddISeeCnt(java.lang.String)</function-signature>
+    </function>
+      <function>
+        <name>getAddNoticeCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddNoticeCnt(java.lang.String)</function-signature>
+    </function>
+       <function>
+        <name>getAddSeeITotalCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddSeeITotalCnt(java.lang.String)</function-signature>
+    </function>
+     <function>
+        <name>getAddISeeTotalCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddISeeTotalCnt(java.lang.String)</function-signature>
+    </function>
+     <function>
+        <name>getAddAITotalCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddAITotalCnt(java.lang.String)</function-signature>
+    </function>
+      <function>
+        <name>getAddMsgTotalCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddMsgTotalCnt(java.lang.String)</function-signature>
+    </function>
+      <function>
+        <name>getAddAttentCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>long getAddAttentCnt(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>online</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>boolean online(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getEveryDayQuestion</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.EveryDayQuestionItem getEveryDayQuestion(int)</function-signature>
+    </function>
+    <function>
+        <name>test_status</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int test_status(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getGiftCount</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getGiftCount(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getGiftLibItems</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.GiftLibItems getGiftLibItems(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>likeUsers</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.util.List likeUsers(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>testPercent</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int testPercent(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>nodes</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.util.List nodes(int,java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>cnodes</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.util.List cnodes(int)</function-signature>
+    </function>
+    <function>
+        <name>verifyPhotoList</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.util.List getVerifyPhotoList(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>isAnswerQuestion</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int isAnswerQuestion(java.lang.String,int)</function-signature>
+    </function>
+
+    <function>
+        <name>manageChannelList</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.util.List getManageChannelList()</function-signature>
+    </function>
+    <function>
+        <name>manageChannel</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.ManageChannel getManageChannel(long)</function-signature>
+    </function>
+
+    <function>
+        <name>statisCount</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int statisCount(java.util.List,int,int)</function-signature>
+    </function>
+    <function>
+        <name>sumStatisCount</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int sumStatisCount(java.util.List,int,int)</function-signature>
+    </function>
+    <function>
+        <name>averageStatisCount</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>double averageStatisCount(java.util.List,int,int)</function-signature>
+    </function>
+
+
+    <function>
+        <name>activeStatic</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>double activeStatic(int,int)</function-signature>
+    </function>
+    <function>
+        <name>getRegLoginCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getRegLoginCnt(int,int,java.util.List,long))</function-signature>
+    </function>
+
+    <function>
+        <name>getOperatorCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getOperatorCnt(long,int,int,java.util.List)</function-signature>
+    </function>
+    <function>
+        <name>getOperatorSubCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getOperatorSubCnt(long,int,int,int,java.util.List)</function-signature>
+    </function>
+    <function>
+        <name>getOperatorAllCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getOperatorAllCnt(int,java.util.List)</function-signature>
+    </function>
+
+    <function>
+        <name>operatorName</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String getOperatorName(int)</function-signature>
+    </function>
+
+    <function>
+        <name>userJson</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String getUserJson(com.juedui100.sns.model.UserInfo)</function-signature>
+    </function>
+
+    <function>
+        <name>getReceiverUsers</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String getReceiverUsers(java.util.List)</function-signature>
+    </function>
+
+    <function>
+        <name>getReceiverUsersSendBox</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String getReceiverUsersSendBox(java.util.List)</function-signature>
+    </function>
+
+    <function>
+        <name>getMatchReason</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String getMatchReason(java.lang.String,java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>checked</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>boolean checked(java.lang.String,int)</function-signature>
+    </function>
+
+    <function>
+        <name>getRegCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getRegCnt(long)</function-signature>
+    </function>
+    <function>
+        <name>getFullRegCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getFullRegCnt(long)</function-signature>
+    </function>
+
+    <function>
+        <name>getActivityDays</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getActivityDays(java.lang.String))</function-signature>
+    </function>
+
+    <function>
+        <name>isTop</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int isTop(int,java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>sameUsersCnt</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int sameUsersCnt(int,int,int,java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>fee</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.BossFee bossFee(long)</function-signature>
+    </function>
+    <function>
+        <name>service</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.BossService bossService(long)</function-signature>
+    </function>
+    <function>
+        <name>isGetVIP</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>boolean isGetVIP(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>certUser</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int certUser(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>getFeeName</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String getFeeName(long)</function-signature>
+    </function>
+    <function>
+        <name>avatarStatus</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int avatarStatus(java.lang.String)</function-signature>
+    </function>
+
+    <function>
+        <name>getUserJurisdiction</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getUserJurisdiction(java.lang.String,java.lang.String))</function-signature>
+    </function>
+    <function>
+        <name>getUserJurisdictionWAP</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getUserJurisdictionWAP(java.lang.String,java.lang.String))</function-signature>
+    </function>
+    
+     <function>
+        <name>getUserPhotoNum</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getUserPhotoNum(java.lang.String)</function-signature>
+    </function>
+    
+    <function>
+        <name>getUserInfoPerfect</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String getUserInfoPerfect(java.lang.String)</function-signature>
+    </function>
+    
+    <function>
+        <name>getUserInfoPerfectNum</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>int getUserInfoPerfectNum(java.lang.String)</function-signature>
+    </function>
+    
+    <function>
+        <name>getUserUrlIsVip</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String getUserUrlIsVip(int,int,java.lang.String)</function-signature>
+    </function>    
+    
+    <function>
+    	<name>getAttentionTime</name>
+    	<function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+    	<function-signature>java.lang.String getAttentionTime(long)</function-signature>
+    </function>
+    
+    <function>
+    	<name>getRandomNum</name>
+    	<function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+    	<function-signature>int getRandomNum(int,int)</function-signature>
+    </function>
+    
+    <function>
+    	<name>getRandNum</name>
+    	<function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+    	<function-signature>int getRandNum(int)</function-signature>
+    </function>
+    
+    <function>
+        <name>inviteFiveRight</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>boolean inviteFiveRight(java.lang.String,java.lang.String,int)</function-signature>
+    </function>
+    
+    <function>
+        <name>inviteFiveRight2</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>boolean inviteFiveRight2(java.lang.String,int)</function-signature>
+    </function>
+    
+      <function>
+        <name>isReActive</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>boolean isReActive(java.lang.String)</function-signature>
+    </function>
+    
+      <function>
+        <name>isShowAD</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>boolean isShowAD(java.lang.String,int)</function-signature>
+    </function>
+    
+    <function>
+        <name>fmtDate</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>java.lang.String fmtDate(long,java.lang.String)</function-signature>
+    </function>
+    
+    <function>
+        <name>getQuestion</name>
+        <function-class>com.juedui100.sns.web.tag.ModelTag</function-class>
+        <function-signature>com.juedui100.sns.model.Question getQuestion(java.lang.String)</function-signature>
+    </function>
+    
+</taglib>

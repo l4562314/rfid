@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<project name="app_sns" default="compile">
+    <!-- properies -->
+    <property name="src.dir" value="src" basedir="."/>
+    <property name="src.dir2" value="gen-javabean" basedir="."/>
+    <property name="classes.dir" value="WebRoot/WEB-INF/classes" basedir="."/>
+    <property name="lib.dir" value="WebRoot/WEB-INF/lib" basedir="."/>
+    <!-- 定义classpath -->
+    <path id="master-classpath">
+        <fileset file="${lib.dir}/*.jar"/>
+        <pathelement path="/usr/local/tomcat-test/servlet-api.jar"/>
+        <pathelement path="/usr/local/tomcat-test/jsp-api.jar"/>
+        <pathelement path="${classes.dir}"/>
+    </path>
+    <!-- 编译 -->
+    <target name="compile" description="compile the source files">
+        <copy file="${src.dir}/db.properties" todir="${classes.dir}"/>
+        <copy file="${src.dir}/jd100.properties" todir="${classes.dir}"/>
+        <copy file="${src.dir}/applicationContext.xml" todir="${classes.dir}"/>
+        <copy file="${src.dir}/StripesResources.properties" todir="${classes.dir}"/>
+        <copy file="${src.dir}/log4j.properties" todir="${classes.dir}"/>
+        <copy file="${src.dir}/mreport.properties" todir="${classes.dir}"/>
+        <copy file="${src.dir}/report.properties" todir="${classes.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir2}" destdir="${classes.dir}" target="1.6">
+
+            <compilerarg line="-encoding UTF-8 "/>
+            <classpath refid="master-classpath"/>
+        </javac>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" target="1.6">
+            <compilerarg line="-encoding UTF-8 "/>
+            <classpath refid="master-classpath"/>
+        </javac>
+    </target>
+    <target name="stop" description="stop tomcat">
+        <exec executable="/root/tomcatctl.sh">
+            <arg value="stop"/>
+        </exec>
+    </target>
+    <target name="start" description="start tomcat">
+        <exec executable="/root/tomcatctl.sh">
+            <arg value="start"/>
+        </exec>
+    </target>
+</project>

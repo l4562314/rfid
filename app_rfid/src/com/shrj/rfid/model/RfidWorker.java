@@ -28,6 +28,7 @@ public class RfidWorker implements Serializable {
 	private Timestamp birthday;
 	private String phone;
 	private byte worktype;
+	private String address;
 
 	public long getId() {
 		return id;
@@ -115,6 +116,14 @@ public class RfidWorker implements Serializable {
 
 	public void setWorktype(byte worktype) {
 		this.worktype = worktype;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 }

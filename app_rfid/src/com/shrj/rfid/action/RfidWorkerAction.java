@@ -1,4 +1,4 @@
-package com.shrj.rfid.admin.action;
+package com.shrj.rfid.action;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
@@ -14,8 +14,9 @@ import net.sourceforge.stripes.integration.spring.SpringBean;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.shrj.rfid.admin.service.RfidWorkerService;
+import com.shrj.rfid.admin.action.BaseAdminAction;
 import com.shrj.rfid.model.RfidWorker;
+import com.shrj.rfid.service.RfidWorkerService;
 
 /**
  * User: chjp

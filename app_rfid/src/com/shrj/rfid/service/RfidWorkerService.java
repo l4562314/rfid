@@ -1,4 +1,4 @@
-package com.shrj.rfid.admin.service;
+package com.shrj.rfid.service;
 
 import java.util.List;
 

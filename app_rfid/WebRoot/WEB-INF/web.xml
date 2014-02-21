@@ -44,15 +44,10 @@
 
         <init-param>
             <param-name>ActionResolver.Packages</param-name>
-            <param-value>com.juedui100.sns.web.action</param-value>
-        </init-param>
-        <init-param>
-            <param-name>ActionResolver.Packages</param-name>
-            <param-value>com.shrj.rfid.action</param-value>
-        </init-param>
-        <init-param>
-            <param-name>ActionResolver.Packages</param-name>
-            <param-value>com.shrj.rfid.admin.action</param-value>
+            <param-value>
+            com.shrj.rfid.action
+            com.shrj.rfid.admin.action
+            </param-value>
         </init-param>
         <init-param>
             <param-name>ExceptionHandler.Class</param-name>

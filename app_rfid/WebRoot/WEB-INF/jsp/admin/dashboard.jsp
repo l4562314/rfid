@@ -10,7 +10,7 @@
 <frameset cols="200,*" frameborder="no" border="1" framespacing="0">
     <frame src="/admin/dashboard.do?left" name="leftFrame" scrolling="auto" noresize="noresize" id="leftFrame" title="leftFrame"
            scrolling="auto"/>
-    <frame src="/admin/dashboard.do?center" name="mainFrame" id="mainFrame" title="mainFrame" scrolling="auto"/>
+    <frame src="/monitor.do" name="mainFrame" id="mainFrame" title="mainFrame" scrolling="auto"/>
 </frameset>
 <noframes>
     <body>
